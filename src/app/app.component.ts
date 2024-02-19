@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
+import { ApiCallService } from './api-call.service';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'villa-garden';
+  title = 'pathFinder';
+  productArray=[];
+  constructor(private getApi:ApiCallService) {}
+  ngOnInit(){
+  // this.getApi.getPost().subscribe((res)=>{
+  //   this.productArray=res;
+  //   console.log(res);
+  // })
 }
+}
+ 
