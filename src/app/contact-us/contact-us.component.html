@@ -294,30 +294,75 @@
 					</g>
 			</g>
 	</svg>
-	<form>
-		<!-- (submit)="form-valid&&onsubmit()" -->
-		<h1 class="title text-center mb-4">Talk to Us</h1>
-
-			<!-- Name -->
+	<form ng-app="myapp" #myform = "ngForm" (ngSubmit) = "onSubmit(myform)" [ngClass]="{ 'form-unsubmitted': !myform.submitted}">
+			<h1 class="title text-center mb-4">Talk to Us</h1>
 			<div class="form-group position-relative">
-				<input type="text" id="formName" class="form-control form-control-lg thick" placeholder="Name">
+				<input ng-model="name" type="text" name="firstName" class="form-control form-control-lg thick" placeholder="First Name" required #firstName>
 			</div>
 
-			<!-- E-mail -->
 			<div class="form-group position-relative">
-				<input type="email" id="formEmail" class="form-control form-control-lg thick" placeholder="E-mail">
+				<input ng-model="lastname" type="text" name="lastName" class="form-control form-control-lg thick" placeholder="Last Name" required>
 			</div>
 
-			<!-- Message -->
+			<div class="form-group position-relative">
+				<input ngModel type="email" name="email" id="formEmail" class="form-control form-control-lg thick" placeholder="E-mail" required="">
+			</div>
+
+			<div class="form-group position-relative">
+				<input ngModel type="number" pattern="((\\+91-?)|0)?[0-9]{10}$" name="number" id="number" class="form-control form-control-lg thick" placeholder="Number" required="">
+			</div>
+
 			<div class="form-group message">
-				<textarea id="formMessage" class="form-control form-control-lg" rows="7" placeholder="Mensagem"></textarea>
+				<textarea ngModel id="formMessage" name="message" class="form-control form-control-lg" rows="7" placeholder="Mensagem" required=""></textarea>
 			</div>
 		
-			<!-- Submit btn -->
 			<div class="text-center">
-				<button type="submit" class="btn btn-primary" tabIndex="-1">Send message</button>
+				<button type="submit" value="Send" class="btn btn-primary" tabIndex="-1">Send message</button>
+			</div>
+			<div>
+				<select name="" id="" (change)="onchange($event)">
+					<option value="customer">customer</option>
+					<option value="supplier">supplier</option>
+					<option value="user">user</option>
+				</select>
+				@if (modulename=='customer'){
+					<h1>Customer Page</h1>
+					<ul>
+						@for(item of customerlist(); track item.id; let ind=$index,count=$count){
+							@switch (item.brand) {
+								@case ('samsung') {
+									<li style="background-color: lightgreen;">{{item.brand}} - {{item.model}}</li>
+								}
+								@case ('iPhone') {
+									<li style="background-color: silver;">{{item.brand}} - {{item.model}}</li>
+								}
+								@case ('xiaomi') {
+									<li style="background-color: rgb(236, 89, 89);">{{item.brand}} - {{item.model}}</li>
+								}
+								@default {
+									<li>{{item.brand}} - {{item.model}}</li>
+								}
+					}
+					}
+					</ul>
+				} @else if(modulename=='supplier'){
+					<h2>Supplier Page</h2>
+					<ul>
+						@for(item of supplierlist(); track item.id; let ind=$index,count=$count){
+							<li>{{item.brand}} - {{item.model}} - {{item.price}}</li>
+						}
+					</ul>
+				} @else {
+					<h2>User Page</h2>
+					<ul>
+						@for(item of userlist(); track item.id; let ind=$index,count=$count){
+							<li>{{item.brand}}</li>
+						}
+					</ul>
+				}
 			</div>
 	</form>
+
+
 	
 </div>
-<!-- partial -->

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ApplicationConfig, NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,8 +10,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ItemsListComponent } from './items-list/items-list.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -23,16 +23,19 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     ItemsListComponent,
     ItemDetailsComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [
     provideClientHydration()
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

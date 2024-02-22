@@ -1,7 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { ApiCallService } from './api-call.service';
-import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { NgForm, AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,10 +11,14 @@ export class AppComponent {
   productArray=[];
   constructor(private getApi:ApiCallService) {}
   ngOnInit(){
-  // this.getApi.getPost().subscribe((res)=>{
-  //   this.productArray=res;
-  //   console.log(res);
-  // })
+  this.getApi.getPost().subscribe((res)=>{
+    this.productArray=res;
+    console.log(res);
+  })
+}
+onSubmit(form: NgForm) {
+  console.log("your form data : " , form.value);
+  
 }
 }
  
