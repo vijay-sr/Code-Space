@@ -7,6 +7,7 @@ import { ItemsListComponent } from './items-list/items-list.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
 import { BlogComponent } from './blog/blog.component';
 import { ExploreComponent } from './explore/explore.component';
+import { LoginPageComponent } from './login/login-page/login-page.component';
 
 const routes: Routes = [
 {path:'', component: HomeComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
 {path:'item-details', component: ItemDetailsComponent },
 {path:'blog', component: BlogComponent },
 {path:'explore', component: ExploreComponent },
+{path:'login', component: LoginPageComponent },
 // {path:'review', loadComponent:()=>import('./component/review/review.component'').then(m=>m.ReviewComponent) },
 {path:'account', component: AccountProfileComponent}];
 
