@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AppComponent } from '../app.component';
-import { ApiCallService } from '../api-call.service';
+import { AppComponent } from '../../app.component';
+import { ApiCallService } from '../../api-call.service';
 
 
 @Component({

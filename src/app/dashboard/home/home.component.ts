@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { ApiCallService } from '../api-call.service';
+import { ApiCallService } from '../../api-call.service';
  
 @Component({
   selector: 'app-home',

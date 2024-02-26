@@ -1,12 +1,12 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
-import { AccountProfileComponent } from './account-profile/account-profile.component';
-import { ItemsListComponent } from './items-list/items-list.component';
-import { ItemDetailsComponent } from './item-details/item-details.component';
-import { BlogComponent } from './blog/blog.component';
-import { ExploreComponent } from './explore/explore.component';
+import { HomeComponent } from './dashboard/home/home.component';
+import { ContactUsComponent } from './dashboard/contact-us/contact-us.component';
+import { AccountProfileComponent } from './dashboard/account-profile/account-profile.component';
+import { ItemsListComponent } from './dashboard/items-list/items-list.component';
+import { ItemDetailsComponent } from './dashboard/item-details/item-details.component';
+import { BlogComponent } from './dashboard/blog/blog.component';
+import { ExploreComponent } from './dashboard/explore/explore.component';
 import { LoginPageComponent } from './login/login-page/login-page.component';
 
 const routes: Routes = [
