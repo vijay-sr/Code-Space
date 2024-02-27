@@ -19,7 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    // AppComponent,
     HomeComponent,
     ContactUsComponent,
     AccountProfileComponent,
@@ -37,6 +37,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-  ]
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class DashboardModule { }

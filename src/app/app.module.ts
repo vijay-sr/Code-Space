@@ -18,7 +18,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
-    // AppComponent,
+    AppComponent,
     // HomeComponent,
     // ContactUsComponent,
     // AccountProfileComponent,
@@ -36,7 +36,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    DashboardModule
+    // DashboardModule
   ],
   providers: [
     provideClientHydration()
