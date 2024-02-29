@@ -2,11 +2,11 @@ import { Component,OnInit } from '@angular/core';
 import { ApiCallService } from '../api-call.service';
 import { NgForm, AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
-  selector: 'app-root',
+  selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.css'
+  styleUrl: './dashboard.component.css',
 })
-export class AppComponent {
+export class DashboardComponent {
   title = 'pathFinder';
   productArray=[];
   constructor(private getApi:ApiCallService) {}

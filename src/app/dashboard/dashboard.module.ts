@@ -14,6 +14,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from '../app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DashboardRoutingModule } from './dashboard-routing.module';
+import { DashboardComponent } from './dashboard.component';
 
 
 
@@ -29,6 +31,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ItemDetailsComponent,
     BlogComponent,
     ExploreComponent,
+    // DashboardComponent
   ],
   imports: [
     CommonModule,
@@ -37,7 +40,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    DashboardRoutingModule  
   ],
+  exports: [
+    HeaderComponent,
+    FooterComponent,
+],
   providers: [],
   bootstrap: [AppComponent]
 })

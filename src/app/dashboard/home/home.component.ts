@@ -6,6 +6,7 @@ import { ApiCallService } from '../../api-call.service';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
+
 export class HomeComponent {
   productArray=[];
   constructor(private getApi:ApiCallService) {}

@@ -16,7 +16,6 @@ const routes: Routes = [
 {path:'item-details', component: ItemDetailsComponent },
 {path:'blog', component: BlogComponent },
 {path:'explore', component: ExploreComponent },
-// {path:'review', loadComponent:()=>import('./component/review/review.component'').then(m=>m.ReviewComponent) },
 {path:'account', component: AccountProfileComponent}];
 
 @NgModule({

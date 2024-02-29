@@ -1,6 +1,9 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { LoginRoutingModule } from './login-routing.module';
+import { AppRoutingModule } from '../app-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -9,7 +12,16 @@ import { LoginPageComponent } from './login-page/login-page.component';
     LoginPageComponent
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    BrowserModule,
+    AppRoutingModule,
+    LoginRoutingModule
+  ],
+  exports: [
+    // LoginPageComponent,
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
 })
 export class LoginModule { }
