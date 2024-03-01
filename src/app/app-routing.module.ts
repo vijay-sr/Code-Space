@@ -9,9 +9,12 @@ import { BlogComponent } from './dashboard/blog/blog.component';
 import { ExploreComponent } from './dashboard/explore/explore.component';
 import { LoginPageComponent } from './login/login-page/login-page.component';
 import { LoginComponent } from './login/login.component';
+import { TestComponent } from './test/test.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
-// {path:'', component: HomeComponent},
+{path:'dashboard', component: DashboardComponent},
+// {path:'/dashboard', component: DashboardComponent},
 // {path:'home', component: HomeComponent},
 // {path:'contactus', component: ContactUsComponent },
 // {path:'item-listing', component: ItemsListComponent },
@@ -19,6 +22,8 @@ const routes: Routes = [
 // {path:'blog', component: BlogComponent },
 // {path:'explore', component: ExploreComponent },
 {path:'login', component: LoginComponent },
+{path:'test', component: TestComponent },
+
 // {path:'account', component: AccountProfileComponent}
 ];
 

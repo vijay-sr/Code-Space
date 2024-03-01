@@ -8,22 +8,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { LoginModule } from './login/login.module';
 import { LoginComponent } from './login/login.component';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    LoginComponent
-    // LoginComponent
-    // HomeComponent,
-    // ContactUsComponent,
-    // AccountProfileComponent,
-    // HeaderComponent,
-    // FooterComponent,
-    // ItemsListComponent,
-    // ItemDetailsComponent,
-    // BlogComponent,
-    // ExploreComponent,
+    LoginComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,

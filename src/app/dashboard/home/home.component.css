@@ -1,0 +1,11 @@
+#more {display: none;}
+
+.what-to-do.more .more-words  {
+  display: inline;
+}
+.what-to-do .more-words {
+  display: none;
+}
+.what-to-do.more .read-more-dots {
+  display: none;
+}
