@@ -4,18 +4,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { DashboardModule } from './dashboard/dashboard.module';
-import { LoginModule } from './login/login.module';
-import { LoginComponent } from './login/login.component';
 import { TestComponent } from './test/test.component';
+import { LoginModuleModule } from './login-module/login-module.module';
+import { DashBoardModule } from './dash-board/dash-board.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
-    LoginComponent,
-    TestComponent
+    TestComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,8 +19,8 @@ import { TestComponent } from './test/test.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    DashboardModule,
-    LoginModule
+    DashBoardModule,
+    LoginModuleModule
   ],
   providers: [
     provideClientHydration()

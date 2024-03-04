@@ -1,30 +1,10 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './dashboard/home/home.component';
-import { ContactUsComponent } from './dashboard/contact-us/contact-us.component';
-import { AccountProfileComponent } from './dashboard/account-profile/account-profile.component';
-import { ItemsListComponent } from './dashboard/items-list/items-list.component';
-import { ItemDetailsComponent } from './dashboard/item-details/item-details.component';
-import { BlogComponent } from './dashboard/blog/blog.component';
-import { ExploreComponent } from './dashboard/explore/explore.component';
-import { LoginPageComponent } from './login/login-page/login-page.component';
-import { LoginComponent } from './login/login.component';
 import { TestComponent } from './test/test.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
-{path:'dashboard', component: DashboardComponent},
-// {path:'/dashboard', component: DashboardComponent},
-// {path:'home', component: HomeComponent},
-// {path:'contactus', component: ContactUsComponent },
-// {path:'item-listing', component: ItemsListComponent },
-// {path:'item-details', component: ItemDetailsComponent },
-// {path:'blog', component: BlogComponent },
-// {path:'explore', component: ExploreComponent },
-{path:'login', component: LoginComponent },
-{path:'test', component: TestComponent },
-
-// {path:'account', component: AccountProfileComponent}
+{ path: 'login', loadChildren: () => import('./login-module/login-module.module').then(m => m.LoginModuleModule) },
+{ path: 'dash-board', loadChildren: () => import('./dash-board/dash-board.module').then(m => m.DashBoardModule) },
 ];
 
 @NgModule({

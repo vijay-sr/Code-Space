@@ -1,12 +1,13 @@
-import { Component,OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ApiCallService } from '../api-call.service';
-import { NgForm, AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NgForm } from '@angular/forms';
+
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.css',
+  selector: 'app-dash-board',
+  templateUrl: './dash-board.component.html',
+  styleUrl: './dash-board.component.css'
 })
-export class DashboardComponent {
+export class DashBoardComponent {
   title = 'pathFinder';
   productArray=[];
   constructor(private getApi:ApiCallService) {}
@@ -20,5 +21,5 @@ onSubmit(form: NgForm) {
   console.log("your form data : " , form.value);
   
 }
+
 }
- 
