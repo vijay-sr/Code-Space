@@ -1,8 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { ApiCallService } from './api-call.service';
 import { NgForm, AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { TestComponent } from './test/test.component';
-import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

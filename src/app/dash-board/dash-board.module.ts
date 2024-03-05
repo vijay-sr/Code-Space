@@ -17,20 +17,21 @@ import { AppRoutingModule } from '../app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from '../app.component';
+import { SharedModuleModule } from '../shared-module/shared-module.module';
 
 
 @NgModule({
   declarations: [
-    DashBoardComponent,
     HomeComponent,
     ContactUsComponent,
     AccountProfileComponent,
-    HeaderComponent,
-    FooterComponent,
     ItemsListComponent,
     ItemDetailsComponent,
     BlogComponent,
     ExploreComponent,
+    HeaderComponent,
+    FooterComponent,
+    DashBoardComponent
   ],
   imports: [
     CommonModule,

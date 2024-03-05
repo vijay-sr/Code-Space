@@ -7,6 +7,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TestComponent } from './test/test.component';
 import { LoginModuleModule } from './login-module/login-module.module';
 import { DashBoardModule } from './dash-board/dash-board.module';
+import { HeaderComponent } from './dash-board/header/header.component';
+import { FooterComponent } from './dash-board/footer/footer.component';
+import { DashBoardComponent } from './dash-board/dash-board.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +22,8 @@ import { DashBoardModule } from './dash-board/dash-board.module';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    DashBoardModule,
-    LoginModuleModule
+    LoginModuleModule,
+    // DashBoardModule
   ],
   providers: [
     provideClientHydration()
