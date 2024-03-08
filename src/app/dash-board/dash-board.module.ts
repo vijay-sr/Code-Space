@@ -31,7 +31,7 @@ import { SharedModuleModule } from '../shared-module/shared-module.module';
     ExploreComponent,
     HeaderComponent,
     FooterComponent,
-    DashBoardComponent
+    // DashBoardComponent
   ],
   imports: [
     CommonModule,

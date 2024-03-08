@@ -12,6 +12,7 @@ import { AccountProfileComponent } from './dash-board/account-profile/account-pr
 const routes: Routes = [
 { path: 'login', loadChildren: () => import('./login-module/login-module.module').then(m => m.LoginModuleModule) },
 { path: 'dash-board', loadChildren: () => import('./dash-board/dash-board.module').then(m => m.DashBoardModule) },
+{ path: 'signup', loadChildren: () => import('./signup/signup.module').then(m => m.SignupModule) },
 
 ];
 

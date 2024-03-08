@@ -10,5 +10,9 @@ export class ApiCallService {
   getPost() {
     return this.http.get<any>('https://jsonplaceholder.typicode.com/users');
   }
+  proceedLogin(inputdata:any) {
+    return this.http.get<any>('https://petstore.swagger.io/v2/user/login?username=adminuser&password=admin')
+
+  }
 
 }

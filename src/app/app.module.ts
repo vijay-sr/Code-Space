@@ -10,11 +10,13 @@ import { DashBoardModule } from './dash-board/dash-board.module';
 import { HeaderComponent } from './dash-board/header/header.component';
 import { FooterComponent } from './dash-board/footer/footer.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
+import { MaterialUiModule} from '../material-ui.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
+    DashBoardComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,9 @@ import { DashBoardComponent } from './dash-board/dash-board.component';
     ReactiveFormsModule,
     FormsModule,
     LoginModuleModule,
-    // DashBoardModule
+    DashBoardModule,
+    MaterialUiModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()

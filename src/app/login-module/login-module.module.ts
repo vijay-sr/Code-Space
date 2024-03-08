@@ -4,16 +4,20 @@ import { CommonModule } from '@angular/common';
 import { LoginModuleRoutingModule } from './login-module-routing.module';
 import { LoginModuleComponent } from './login-module.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { MaterialUiModule } from '../../material-ui.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     LoginModuleComponent,
-    LoginPageComponent
+    LoginPageComponent,
   ],
   imports: [
     CommonModule,
-    LoginModuleRoutingModule
+    LoginModuleRoutingModule,
+    MaterialUiModule,
+    FormsModule
   ]
 })
 export class LoginModuleModule { }
