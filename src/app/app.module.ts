@@ -11,6 +11,7 @@ import { HeaderComponent } from './dash-board/header/header.component';
 import { FooterComponent } from './dash-board/footer/footer.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import { MaterialUiModule} from '../material-ui.module';
+import { ServicesModule } from './services/services.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MaterialUiModule} from '../material-ui.module';
     LoginModuleModule,
     DashBoardModule,
     MaterialUiModule,
-    HttpClientModule
+    HttpClientModule,
+    ServicesModule
   ],
   providers: [
     provideClientHydration()

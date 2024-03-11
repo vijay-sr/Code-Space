@@ -22,5 +22,4 @@ onSubmit(form: NgForm) {
   console.log("your form data : " , form.value);
   
 }
-
 }
