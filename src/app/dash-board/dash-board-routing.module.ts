@@ -7,6 +7,8 @@ import { ItemDetailsComponent } from '../dash-board/item-details/item-details.co
 import { BlogComponent } from '../dash-board/blog/blog.component';
 import { ExploreComponent } from '../dash-board/explore/explore.component';
 import { AccountProfileComponent } from '../dash-board/account-profile/account-profile.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { SharedModuleModule } from '../shared-module/shared-module.module';
 
 const routes: Routes = [
 {path:'', component: HomeComponent},
@@ -16,7 +18,8 @@ const routes: Routes = [
 {path:'item-details', component: ItemDetailsComponent },
 {path:'blog', component: BlogComponent },
 {path:'explore', component: ExploreComponent },
-{path:'account', component: AccountProfileComponent}
+{path:'account', component: AccountProfileComponent},
+{path:'gallery', component: GalleryComponent}
 ];
 
 @NgModule({

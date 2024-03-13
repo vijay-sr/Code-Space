@@ -7,11 +7,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TestComponent } from './test/test.component';
 import { LoginModuleModule } from './login-module/login-module.module';
 import { DashBoardModule } from './dash-board/dash-board.module';
-import { HeaderComponent } from './dash-board/header/header.component';
-import { FooterComponent } from './dash-board/footer/footer.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
-import { MaterialUiModule} from '../material-ui.module';
 import { ServicesModule } from './services/services.module';
+import { TestHomeComponent } from './dash-board/test-home/test-home.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +25,6 @@ import { ServicesModule } from './services/services.module';
     FormsModule,
     LoginModuleModule,
     DashBoardModule,
-    MaterialUiModule,
     HttpClientModule,
     ServicesModule
   ],

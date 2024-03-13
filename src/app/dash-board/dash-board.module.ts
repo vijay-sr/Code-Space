@@ -2,12 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DashBoardRoutingModule } from './dash-board-routing.module';
-import { DashBoardComponent } from './dash-board.component';
 import { HomeComponent } from '../dash-board/home/home.component';
 import { ContactUsComponent } from '../dash-board/contact-us/contact-us.component';
 import { AccountProfileComponent } from '../dash-board/account-profile/account-profile.component';
-import { HeaderComponent } from '../dash-board/header/header.component';
-import { FooterComponent } from '../dash-board/footer/footer.component';
 import { ItemsListComponent } from '../dash-board/items-list/items-list.component';
 import { ItemDetailsComponent } from '../dash-board/item-details/item-details.component';
 import { BlogComponent } from '../dash-board/blog/blog.component';
@@ -18,6 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from '../app.component';
 import { SharedModuleModule } from '../shared-module/shared-module.module';
+import { GalleryComponent } from './gallery/gallery.component';
+import { TestHomeComponent } from './test-home/test-home.component';
 
 
 @NgModule({
@@ -29,9 +28,8 @@ import { SharedModuleModule } from '../shared-module/shared-module.module';
     ItemDetailsComponent,
     BlogComponent,
     ExploreComponent,
-    HeaderComponent,
-    FooterComponent,
-    // DashBoardComponent
+    GalleryComponent,
+    TestHomeComponent,
   ],
   imports: [
     CommonModule,
@@ -41,6 +39,8 @@ import { SharedModuleModule } from '../shared-module/shared-module.module';
     ReactiveFormsModule,
     FormsModule,
     DashBoardRoutingModule,
+    SharedModuleModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

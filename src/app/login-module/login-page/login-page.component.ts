@@ -12,7 +12,7 @@ export class LoginPageComponent {
   respdata:any;
 
 proceedLogin(logindata:any) {
-  if(logindata.valid) {
+  if(logindata.value.user==="adminuser") {
     this.service.proceedLogin(logindata.value).subscribe(item =>{
       this.respdata=item;
       if(this.respdata!=null){
@@ -24,9 +24,11 @@ proceedLogin(logindata:any) {
       console.log(this.respdata);
     })
   } 
-  // console.log(logindata.valid);
-  // console.log(logindata.value);
-  // console.log(logindata);
+  else {
+    alert("Login Failed")
+  }
+  console.log(logindata.value);
+  console.log(logindata);
 }
 directSignup() {
   this.router.navigate([''])
